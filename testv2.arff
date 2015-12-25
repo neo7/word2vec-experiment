@@ -1,0 +1,76 @@
+@relation '_Users_saurabhtiwari_IllinoisTech_CS585_cs585project_review_polarity_txt_sentoken-weka.filters.unsupervised.attribute.StringToWordVector-R1-W1000-prune-rate-1.0-T-I-N0-S-stemmerweka.core.stemmers.SnowballStemmer-M1-stopwords/Users/saurabhtiwari/IllinoisTech/CS585/cs585project/stopwords_eng.txt-tokenizerweka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.CfsSubsetEval-Sweka.attributeSelection.BestFirst -D 1 -N 5'
+
+@attribute awful numeric
+@attribute bad numeric
+@attribute badly numeric
+@attribute boring numeric
+@attribute dull numeric
+@attribute effective numeric
+@attribute enjoyable numeric
+@attribute fails numeric
+@attribute great numeric
+@attribute hilarious numeric
+@attribute job numeric
+@attribute lame numeric
+@attribute laughable numeric
+@attribute life numeric
+@attribute mess numeric
+@attribute painfully numeric
+@attribute perfect numeric
+@attribute performances numeric
+@attribute pointless numeric
+@attribute poor numeric
+@attribute ridiculous numeric
+@attribute script numeric
+@attribute seagal numeric
+@attribute solid numeric
+@attribute stupid numeric
+@attribute tale numeric
+@attribute terrible numeric
+@attribute true numeric
+@attribute waste numeric
+@attribute wasted numeric
+@attribute world numeric
+@attribute worst numeric
+@attribute animation numeric
+@attribute details numeric
+@attribute edge numeric
+@attribute era numeric
+@attribute fascinating numeric
+@attribute flaws numeric
+@attribute greatest numeric
+@attribute jedi numeric
+@attribute memorable numeric
+@attribute outstanding numeric
+@attribute perfectly numeric
+@attribute portrayal numeric
+@attribute portrayed numeric
+@attribute realistic numeric
+@attribute share numeric
+@attribute subtle numeric
+@attribute teacher numeric
+@attribute terrific numeric
+@attribute wonderfully numeric
+@attribute @@class@@ {neg,pos}
+
+@data
+{1 0.669767,13 0.653563,14 1.818935,30 0.849714,34 2.214039,51 ?}
+{29 2.004147,51 ?}
+{0 1.950108,14 1.818935,25 1.661402,40 1.910809,51 ?}
+{4 1.985662,14 1.818935,32 2.323712,51 ?}
+{1 0.669767,3 1.539483,51 ?}
+{1 0.669767,3 1.539483,8 0.733648,14 1.818935,51 ?}
+{13 0.653563,20 1.905373,28 1.899979,30 0.849714,51 ?}
+{1 0.669767,14 1.818935,24 1.624326,26 1.950108,29 2.004147,51 ?}
+{1 0.669767,13 0.653563,15 2.442211,17 1.173373,23 1.772708,27 1.303526,30 0.849714,51 ?}
+{0 1.950108,1 0.669767,3 1.539483,25 1.661402,51 ?}
+{13 0.653563,30 0.849714,46 2.055995,51 ?}
+{21 0.901172,51 ?}
+{1 0.669767,4 1.985662,12 2.323712,51 ?}
+{1 0.669767,11 2.112037,19 1.692559,24 1.624326,31 1.478374,51 ?}
+{1 0.669767,3 1.539483,13 0.653563,24 1.624326,51 ?}
+{5 1.725184,28 1.899979,51 ?}
+{1 0.669767,28 1.899979,29 2.004147,31 1.478374,51 ?}
+{1 0.669767,8 0.733648,10 1.093408,14 1.818935,15 2.442211,21 0.901172,51 ?}
+{8 0.733648,10 1.093408,51 ?}
+{1 0.669767,8 0.733648,19 1.692559,21 0.901172,28 1.899979,51 ?}
