@@ -1,0 +1,4 @@
+acl_imdb_download
+
+Download Location.
+https://s3.amazonaws.com/modelfilernnlm/projectcs585models/aclImdb.zip

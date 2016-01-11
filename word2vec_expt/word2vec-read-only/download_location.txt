@@ -1,0 +1,4 @@
+download file
+
+Download location:
+https://s3.amazonaws.com/modelfilernnlm/projectcs585models/vectors_compressed.zip

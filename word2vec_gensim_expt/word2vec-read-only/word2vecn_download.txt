@@ -1,0 +1,4 @@
+download_location
+
+Download Files
+https://s3.amazonaws.com/modelfilernnlm/projectcs585models/word2vec_zipped_vectors.zip
