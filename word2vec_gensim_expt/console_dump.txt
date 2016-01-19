@@ -1,18 +1,53 @@
-Console dumps
+Console dump
+
 -------------START--------------------
 
-saurabhtiwari:word2vec_gensim_expt]$ ./word2vec -train ../alldata-id.txt -output vectors.txt -cbow 0 -size 100 -window 10 -negative 5 -hs 0 -sample 1e-4 -threads 40 -binary 0 -iter 20 -min-count 1 -sentence-vectors 1
 
+####### Version Information ############
+Python 2.7.10 (default, Oct 23 2015, 18:05:06)
+[GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+
+
+######### Script for installing additional packages for python ###########
 pip install statsmodels
 pip install patsy
 pip install pandas
 
+###Create the vectors using word2vec libraries.###
+
+saurabhtiwari:word2vec_gensim_expt]$ ./word2vec -train ../alldata-id.txt -output vectors.txt -cbow 0 -size 100 -window 10 -negative 5 -hs 0 -sample 1e-4 -threads 40 -binary 0 -iter 20 -min-count 1 -sentence-vectors 1
+
+######Explanation of Word2vec params ############
+
+-size 100-dimensional vectors
+
+cbow=0 means skip-gram which is equivalent to the paper's 'PV-DBOW' mode, matched in gensim with dm=0
+
+added to that DBOW model are two DM models, one which averages context vectors (dm_mean) and one which concatenates them (dm_concat, resulting in a much larger, slower, more data-hungry model)
+
+a min_count=2 saves quite a bit of model memory, discarding only words that appear in a single doc (and are thus no more expressive than the unique-to-each doc vectors themselves)
+
+######End of explanation of Word2vec params #######
+
+### Running the file containing All the scripts ####
+
 
 saurabhtiwari:word2vec_gensim_expt]$ python all_scripts.py
+
+######Printing the file stats#######
+
 100000 docs: 25000 train-sentiment, 25000 test-sentiment
+
+#######Printing the different models of files that will be used######
 Doc2Vec(dm/c,d100,n5,w5,mc2,t4)
 Doc2Vec(dbow,d100,n5,mc2,t4)
 Doc2Vec(dm/m,d100,n5,w10,mc2,t4)
+
+##########Starting to train############
+####This output is for the training models which are being used in the development#########
+####Printed using the following columns########
+####best_indicator, infer_err, epoch + 1, name + '_inferred', duration, eval_duration #####
 START 2016-01-10 00:49:28.398967
 *0.417200 : 1 passes : Doc2Vec(dm/c,d100,n5,w5,mc2,t4) 92.7s 2.3s
 *0.375200 : 1 passes : Doc2Vec(dm/c,d100,n5,w5,mc2,t4)_inferred 92.7s 18.3s
@@ -160,6 +195,8 @@ completed pass 19 at alpha 0.003400
 *0.104400 : 20 passes : dbow+dmc_inferred 0.0s 19.4s
 completed pass 20 at alpha 0.002200
 END 2016-01-10 01:52:16.298317
+
+############ Output for Prediction Accuracies ###########
 0.094400 dbow+dmm_inferred
 0.099640 Doc2Vec(dbow,d100,n5,mc2,t4)
 0.100080 dbow+dmc
@@ -170,15 +207,11 @@ END 2016-01-10 01:52:16.298317
 0.192400 Doc2Vec(dm/m,d100,n5,w10,mc2,t4)_inferred
 0.217560 Doc2Vec(dm/c,d100,n5,w5,mc2,t4)
 0.228800 Doc2Vec(dm/c,d100,n5,w5,mc2,t4)_inferred
-for doc 13339...
-Doc2Vec(dm/c,d100,n5,w5,mc2,t4):
- [(13339, 0.8299012184143066), (15729, 0.43348580598831177), (38054, 0.40053611993789673)]
-Doc2Vec(dbow,d100,n5,mc2,t4):
- [(13339, 0.9801722168922424), (80939, 0.6286765933036804), (32564, 0.6124342083930969)]
-Doc2Vec(dm/m,d100,n5,w10,mc2,t4):
- [(13339, 0.913860559463501), (53966, 0.5883081555366516), (88219, 0.574521005153656)]
+
+###########End of prediction Accuracies ###############
+
 saurabhtiwari:word2vec_gensim_expt]$
 
 
-----------------END-----------------------
+----------------END Of Experiment———————————
 Console Dump End.
