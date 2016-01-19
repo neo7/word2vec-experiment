@@ -102,5 +102,9 @@ Predictions on test split
 
 
 > Current progress of the project: Successfully able to predict the movie review with the given accuracy of the models from training and test data using weka.
-
-** Working on Word2vec to create weka friendly models that can be used for Classification
+> Successfully able to train models using word2vec vectors and perform classification and find accuracies.
+> Please refer to the individual folders of word2vec_expt for RNNLM and Liblinear Classification
+> and word2vec_gensim_expt for gensim based experiment and its result. 
+Current accuracies of the methods used.
+1. Gensim based traning and prediction accuracy 90.6%
+2. RNNLM + Liblinear based classification accuracy 85%
